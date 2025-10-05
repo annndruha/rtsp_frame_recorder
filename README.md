@@ -7,7 +7,7 @@ Docker container for save RTSP stream as separate frames from multiple sources i
 
 #### Clone repo and go to directory
 ```bash
-git clone https://github.com/annndruha/rtsp_recorder && cd rtsp_recorder
+git clone https://github.com/annndruha/rtsp_frame_recorder && cd rtsp_frame_recorder
 ```
 #### Setup your sources
 Copy template setting.json

@@ -9,7 +9,7 @@ logging.basicConfig(
     level=logging.INFO,
     datefmt='%Y-%m-%d %H:%M:%S')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     while True:
         try:
             get_frames_from_all_sources()

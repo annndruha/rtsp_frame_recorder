@@ -17,12 +17,12 @@ def get_filename(url_rtsp: str, time_zone_delta: float) -> str:
     os.makedirs('data', exist_ok=True)
     directory = os.path.join('data', rtsp_folder)
     os.makedirs(directory, exist_ok=True)
-    file_name = os.path.join(directory, current_time(time_zone_delta).strftime("%Y_%m_%d__%H_%M_%S_%f.png"))
+    file_name = os.path.join(directory, current_time(time_zone_delta).strftime('%Y_%m_%d__%H_%M_%S_%f.png'))
     return file_name
 
 
 def load_settings() -> Tuple[int, list[Any], float, Tuple[int, int], int, int]:
-    with open('settings.json') as f:
+    with open('settings.json', encoding='utf-8') as f:
         settings = json.load(f)
 
     delay = int(settings['delay'])
@@ -41,7 +41,7 @@ def load_settings() -> Tuple[int, list[Any], float, Tuple[int, int], int, int]:
 
 
 def get_frames_from_all_sources() -> None:
-    delay, rtsp_list, time_zone, resize_to, skip_frames, delay_per_cam = load_settings()
+    _, rtsp_list, time_zone, resize_to, skip_frames, delay_per_cam = load_settings()
 
     for rtsp_url in rtsp_list:
         cap = cv2.VideoCapture(rtsp_url)

@@ -1,0 +1,38 @@
+[tool.isort]
+extend_skip = ["venv", ".venv", "migrations", "data", "static", "logs", "drafts", "tests"]
+
+[tool.pylint]
+ignore=["venv", ".venv", "migrations", "data", "static", "logs", "drafts", "tests"]
+generated-members=["func.now*", "cv2.*"]
+disable=[
+    "C0114", # missing-module-docstring
+    "C0115", # missing-class-docstring
+    "C0116", # missing-function-docstring
+    "W0511", # to do comments
+    "R0903", # too-few-public-methods
+    "E0401", # import-error (for github side linting)
+    "W1203", # logging-fstring-interpolation
+    "W1201", # logging-not-lazy
+    "W0718" # broad-exception-caught
+]
+
+[tool.pylint.format]
+max-line-length = 256
+
+
+[tool.flake8]
+inline-quotes = "'"
+docstring-quotes = "\"\"\""
+multiline-quotes = "'''"
+max-line-length = 256
+exclude =[".git",
+          "__pycache__",
+          "venv",
+          ".venv",
+          "migrations",
+          "data",
+          "static",
+          "logs",
+          "drafts",
+          "tests"
+]
