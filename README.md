@@ -1,6 +1,6 @@
-# rtsp_recorder
+# RTSP Frame Recorder
 
-Docker container for save RTSP frames from multiple sources in attached volume `data`.
+Docker container for save RTSP stream as separate frames from multiple sources in attached volume `data`.
 
 
 ### Run
