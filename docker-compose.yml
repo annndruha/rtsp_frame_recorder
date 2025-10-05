@@ -2,10 +2,9 @@ version: '3.8'
 
 
 services:
-  rtsp_recorder:
-    pull_policy: always
-    image: ghcr.io/annndruha/rtsp_recorder:latest
-    container_name: rtsp_recorder
+  rtsp_frame_recorder:
+    build: .
+    container_name: rtsp_frame_recorder
     restart: always
     volumes:
       - ./data:/app/data
